@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Arklight — Demo</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .header-bottom {
+            display: flex;
+        }
+        .main-content {
+            padding-top: 160px;
+        }
+        @media (max-width: 900px) {
+            .main-content {
+                padding-top: 190px;
+            }
+        }
+        @media (max-width: 700px) {
+            .main-content {
+                padding-top: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="header-top">
+                <div class="logo-section">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14 1L26 7.5V20.5L14 27L2 20.5V7.5L14 1Z" stroke="white" stroke-width="1" fill="none"/>
+                                <path d="M14 7L20 10.5V17.5L14 21L8 17.5V10.5L14 7Z" stroke="white" stroke-width="0.75" fill="none" opacity="0.5"/>
+                                <circle cx="14" cy="14" r="2" fill="white"/>
+                            </svg>
+                        </div>
+                        <span class="logo-text">Project Arklight</span>
+                    </div>
+                </div>
+                <nav class="global-nav" aria-label="Primary">
+                    <div class="nav-links">
+                        <a class="global-link" href="index.html" data-nav="home">Home</a>
+                        <a class="global-link" href="partners.html" data-nav="partners">Partners</a>
+                        <a class="global-link" href="investors.html" data-nav="investors">Investors</a>
+                    </div>
+                    <a class="nav-cta" href="demo.html" data-nav="demo">Demo</a>
+                </nav>
+            </div>
+            <div class="header-bottom">
+                <nav class="nav-tabs" role="tablist" aria-label="Assessment views">
+                    <button class="nav-tab active" role="tab" aria-selected="true" data-view="overview" tabindex="0">Overview</button>
+                    <button class="nav-tab" role="tab" aria-selected="false" data-view="candidates" tabindex="-1">Candidates</button>
+                    <button class="nav-tab" role="tab" aria-selected="false" data-view="cutlines" tabindex="-1">Role Cutlines</button>
+                    <button class="nav-tab" role="tab" aria-selected="false" data-view="heatmap" tabindex="-1">Matrix</button>
+                </nav>
+            </div>
+        </header>
+
+        <main class="page-view main-content">
+
+            <section id="assessment-demo" class="assessment-demo">
+            <!-- Overview View -->
+            <div id="view-overview" class="view active" role="tabpanel" aria-labelledby="tab-overview">
+                <section class="hero">
+                    <p class="hero-eyebrow">AI-Native Talent Evaluation</p>
+                    <h1 class="hero-title">Arklight Cognitive Index</h1>
+                    <p class="hero-subtitle">
+                        Built for the companies reshaping defense and industry. The Arklight Cognitive Index combines military-grade psychological research with adaptive AI to quantify aptitude, predict learning velocity, and identify mission-ready talent for the next generation of American industrial leaders.
+                    </p>
+                </section>
+
+                <p class="impact-context">Observed impact when ARC informs hiring and deployment decisions versus traditional resume and interview screening.</p>
+                <div class="impact-strip" aria-label="Impact metrics">
+                    <div class="impact-card">
+                        <div class="impact-value">47%</div>
+                        <div class="impact-label">Lower 90-Day<br>Attrition</div>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-value">2.3&times;</div>
+                        <div class="impact-label">Faster Time<br>to Mastery</div>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-value">63%</div>
+                        <div class="impact-label">Reduced False<br>Positives</div>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-value">4.1&times;</div>
+                        <div class="impact-label">Integrity Flag<br>Detection</div>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-value">89%</div>
+                        <div class="impact-label">Hiring Manager<br>Confidence</div>
+                    </div>
+                </div>
+                <p class="demo-disclaimer">Illustrative demo metrics</p>
+                <p class="section-handoff">Select a candidate to view AI-generated deployment guidance, ramp projections, and risk profile.</p>
+
+                <section class="section-header">
+                    <h2 class="section-title">Candidate Dashboard</h2>
+                </section>
+
+                <div id="overview-dashboard"></div>
+            </div>
+
+            <!-- Candidates View -->
+            <div id="view-candidates" class="view" role="tabpanel" aria-labelledby="tab-candidates">
+                <section class="section-header">
+                    <h2 class="section-title">Assessment Results</h2>
+                </section>
+
+                <div class="controls-bar">
+                    <div class="control-group">
+                        <label class="control-label" for="sort-select">Sort</label>
+                        <select id="sort-select">
+                            <option value="aci">ACI Score</option>
+                            <option value="cognitive">Cognitive Core</option>
+                            <option value="technical">Technical Aptitude</option>
+                            <option value="behavioral">Behavioral Integrity &amp; Mission Alignment</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="role-filter">Role</label>
+                        <select id="role-filter">
+                            <option value="all">All Roles</option>
+                            <option value="cnc-setup-operator">CNC Setup &amp; Operator</option>
+                            <option value="tooling-engineer">Tooling Engineer</option>
+                            <option value="cam-programmer">CAM Programmer</option>
+                            <option value="quality-metrology">CMM Programmer</option>
+                            <option value="strategic-sourcing">Strategic Sourcing Manager</option>
+                            <option value="mfg-engineer">Manufacturing Engineer (Production)</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="cutline-filter">
+                            <span>Meets cutline only</span>
+                        </label>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="candidate-filter">Filter</label>
+                        <input type="text" id="candidate-filter" class="candidate-filter" placeholder="Filter candidates" autocomplete="off">
+                    </div>
+                </div>
+
+                <div id="candidates-table-container"></div>
+            </div>
+
+            <!-- Candidate Detail View -->
+            <div id="view-candidate-detail" class="view" role="tabpanel">
+                <button class="detail-back" id="back-to-candidates">
+                    <span>&larr;</span> Back to Candidates
+                </button>
+                <div id="candidate-detail-content"></div>
+            </div>
+
+            <!-- Role Cutlines View -->
+            <div id="view-cutlines" class="view" role="tabpanel" aria-labelledby="tab-cutlines">
+                <section class="section-header">
+                    <h2 class="section-title">Role Cutlines & Fit Analysis</h2>
+                </section>
+                <div id="cutlines-content"></div>
+            </div>
+
+            <!-- Heatmap View -->
+            <div id="view-heatmap" class="view" role="tabpanel" aria-labelledby="tab-heatmap">
+                <section class="section-header">
+                    <h2 class="section-title">Comparison Matrix</h2>
+                </section>
+                <div id="heatmap-content"></div>
+            </div>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <div class="footer-disclaimer">
+                All candidate data is synthetic for demonstration
+            </div>
+            <p>Project Arklight — ACI v2.4</p>
+        </footer>
+    </div>
+
+    <script src="js/common.js"></script>
+    <script src="js/demo.js"></script>
+</body>
+</html>
